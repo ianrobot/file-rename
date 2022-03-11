@@ -3,12 +3,16 @@
 set -ex
 
 FILE_EXT=ext
-NUM_FILES=$1
+NUM_FILES=${1:-5}
 TEST_DIR="${2:-TEST-FILES}"
 
-if [ ! -d "${TEST_DIR}" ]; then
-  mkdir "${TEST_DIR}"
+# args check
+if ! [[ ${NUM_FILES} =~ ^[0-9]+$ ]]; then
+  echo "First argument must be a number (<=50)" >&2; exit 1;
 fi
+
+[[ -d "${TEST_DIR}" ]] || mkdir "${TEST_DIR}"
+
 cd "$TEST_DIR"
 
 # https://stackoverflow.com/questions/32484504/using-random-to-generate-a-random-string-in-bash
@@ -27,6 +31,6 @@ function rand-str {
 }
 
 # shellcheck disable=SC2034
-for (( i = 1; i <= "${NUM_FILES}"; i++ )); do
+for (( i = 1; i <= ${NUM_FILES}; i++ )); do
   touch "$(rand-str 10)".$FILE_EXT
 done
