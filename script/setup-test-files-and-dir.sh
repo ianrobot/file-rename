@@ -31,6 +31,6 @@ function rand-str {
 }
 
 # shellcheck disable=SC2034
-for (( i = 1; i <= ${NUM_FILES}; i++ )); do
+for (( i = 1; i <= NUM_FILES; i++ )); do
   touch "$(rand-str 10)".$FILE_EXT
 done

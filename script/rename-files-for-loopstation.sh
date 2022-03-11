@@ -29,7 +29,7 @@ for file in $FILES; do
 done
 
 # TODO Verify content is the same
-for source_file in ${FILES}; do
-  MD5_SOURCE=$(md5sum ${source_file})
+#for source_file in ${FILES}; do
+#  MD5_SOURCE=$(md5sum ${source_file})
   
-done
+#done
