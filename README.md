@@ -10,11 +10,14 @@ For convenience of linux users there is a simple bash script that will do the jo
 
 ### Usage
 
-**Important:** Do not execute the script in the directory the audio files reside. (For now, may be fixed later.)
-Download the *rename-files-for-loopstation.sh* script to your computer, e.g. the *Downloads* directory. Assuming the audio files reside in */Downloads/audio/* you will have to do the following:
+**Important:** Do not execute the script from the directory the audio files reside in. (For now, may be fixed later.)
 
-1. Open a Terminal in the Downloads folder
-2. Make the script executable: ```sudo chmod u+x rename-files-for-loopstation.sh``` You may be requested to enter your password.
-3. Run the script: ```/rename-files-for-loopstation.sh audio```
+Download the *rename-files-for-loopstation.sh* script from the *scripts* directory to your computer, e.g. the *Downloads* directory.
+
+Assuming the audio files reside in */Downloads/audio/* and the script in */Downloads*  you will have to do the following:
+
+1. Open a Terminal in the Downloads folder. (Right click, *Open Terminal*)
+2. Make the script executable: ```chmod u+x rename-files-for-loopstation.sh```
+3. Run the script: ```./rename-files-for-loopstation.sh audio```
 
 The last command will run the script and create a directory *Renamend files* in the current, i.e. *Download*, directory.
